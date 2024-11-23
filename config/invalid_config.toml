@@ -1,0 +1,23 @@
+[server]
+port = "http"
+document_root = "/var/www"
+
+[[mimetypes]]
+extension = ".txt"
+type = "text/plain"
+
+[[mimetypes]]
+extension = ".html"
+type = "text/html"
+
+[[mimetypes]]
+extension = ".jpg"
+type = "image/jpg"
+
+[[mimetypes]]
+extension = ".png"
+type = "image/png"
+
+[log]
+level = "Debug"
+destination = "stderr"

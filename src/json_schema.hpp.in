@@ -1,0 +1,11 @@
+#ifndef JSON_SCHEMA_HPP
+#define JSON_SCHEMA_HPP
+
+namespace config_file
+{
+
+constexpr char const * schema_json = R"(@CONFIG_SCHEMA_JSON@)";
+
+}
+
+#endif

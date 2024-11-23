@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="config">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="server" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="mimetypes" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="log" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="server">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="port" type="xs:positiveInteger" />
+            <xs:element name="document-root" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="mimetypes">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="mimetype" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="extension" type="xs:string" />
+                    <xs:attribute name="value" type="xs:string" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="log">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="level" type="xs:string" />
+            <xs:element name="destination" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>

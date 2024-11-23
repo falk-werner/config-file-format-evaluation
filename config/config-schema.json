@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "config-schema-1.0.json",
+    "title": "Config file schema",
+    "description": "schema of config file",
+    "type": "object",
+    "properties": {
+        "server": {
+            "description": "Server settings",
+            "type": "object",
+            "properties": {
+                "port": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 65535
+                },
+                "document-root": {
+                    "type": "string"
+                }
+            },
+            "required": ["port", "document-root"]
+        },
+        "mimetypes": {
+            "description": "MIME type mapping",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "extension": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "required": ["extension", "type"]
+            }
+        },
+        "log": {
+            "description": "Log settings",
+            "properties": {
+                "level": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": ["level", "destination"]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <server>
+        <port>http</port>
+        <document-root>/var/www</document-root>
+    </server>
+    <mimetypes>
+        <mimetype extension=".txt" value="text/plain" />
+        <mimetype extension=".html" value="text/html" />
+        <mimetype extension=".jpg" value="image/jpeg" />
+        <mimetype extension=".png" value="image/png" />
+    </mimetypes>
+    <log>
+        <level>Debug</level>
+        <destination>stderr</destination>
+    </log>
+</config>

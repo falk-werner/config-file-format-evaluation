@@ -1,0 +1,12 @@
+#ifndef XML_SCHEMA_HPP
+#define XML_SCHEMA_HPP
+
+namespace config_file
+{
+
+constexpr char const * schema_xml = R"(@CONFIG_SCHEMA_XML@)";
+
+}
+
+
+#endif

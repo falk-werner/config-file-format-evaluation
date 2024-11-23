@@ -1,0 +1,26 @@
+{
+    "name": "ConfigFileEvaluation",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".",
+        "target": "devcontainer"
+    },
+    "remoteUser": "user",
+    "mounts": [{
+        "source": "${localEnv:HOME}/.ssh",
+        "target": "/home/user/.ssh",
+        "type": "bind"
+    }],
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "$schema": "config-schema-1.0.json",
+    "server": {
+        "port": "https",
+        "document-root": "/var/www"
+    },
+    "mimetypes": [
+        { "extension": ".txt", "type": "text/plain" },
+        { "extension": ".html", "type": "text/html" },
+        { "extension": ".jpg", "type": "image/jpg" },
+        { "extension": ".png", "type": "image/png" }
+    ],
+    "log": {
+        "level": "Debug",
+        "destination": "stderr"
+    }
+}
